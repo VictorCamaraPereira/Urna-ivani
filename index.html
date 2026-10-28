@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urna Digital Ivani </title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>🗳️ Urna Digital Ivani</h1>
+  <nav>
+    <button data-v="urna" class="on">Urna</button>
+    <button data-v="cadastro">Cadastro de chapas</button>
+    <button data-v="resultado">Resultado</button>
+  </nav>
+</header>
+
+<main>
+<section id="urna" class="view on">
+  <div class="urna">
+    <div class="tela" id="tela"></div>
+    <div class="painel">
+      <div class="brasao">JUSTIÇA<br>ESCOLAR</div>
+      <div class="teclado" id="teclado"></div>
+      <div class="acoes">
+        <button class="k branco" data-a="branco">BRANCO</button>
+        <button class="k corrige" data-a="corrige">CORRIGE</button>
+        <button class="k confirma" data-a="confirma">CONFIRMA</button>
+      </div>
+    </div>
+  </div>
+  <p class="dica">Dica: você também pode usar o teclado (números, B = branco, Backspace = corrige, Enter = confirma).</p>
+</section>
+
+<section id="cadastro" class="view">
+  <h2>Cadastro das chapas</h2>
+  <div class="cards">
+    <div class="card" data-i="0"></div>
+    <div class="card" data-i="1"></div>
+  </div>
+  <div class="barra">
+    <button id="salvar" class="btn">Salvar chapas</button>
+    <button id="trocaSenha" class="btn sec">Trocar senha do mesário</button>
+  </div>
+  <p id="msg" class="msg"></p>
+</section>
+
+<section id="resultado" class="view">
+  <h2>Resultado da votação</h2>
+  <div id="res"></div>
+  <div class="barra">
+    <button id="atualiza" class="btn">Atualizar</button>
+    <button id="zera" class="btn perigo">Zerar votos</button>
+  </div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
